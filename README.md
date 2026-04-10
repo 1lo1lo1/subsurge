@@ -18,13 +18,14 @@ subsurge queries **16 free data sources** simultaneously, streams results instan
 
 ## 📦 Installation
 
-### From Source (Go 1.21+)
+### Method 1: go install (Recommended)
 ```bash
+go install github.com/1lo1lo1/subsurge/cmd/subsurge@latest
+Method 2: From Source
 git clone https://github.com/1lo1lo1/subsurge.git
 cd subsurge
 go build -o subsurge cmd/subsurge/main.go
 sudo mv subsurge /usr/local/bin/
-
 🚀 Quick Start
 # Basic scan — no setup needed!
 subsurge -d example.com --free
@@ -37,7 +38,6 @@ cat domains.txt | subsurge --free --silent | anew found.txt
 
 # JSON output
 subsurge -d example.com --free -f json -o results.json
-
 🔧 Pipeline Examples
 # Classic recon
 subsurge -d target.com --free --silent | dnsx -silent | httpx -silent | nuclei -t cves/
@@ -91,7 +91,6 @@ Want 27 total sources? Add API keys for deeper results:
 # Generate config template
 subsurge config
 # Edit: ~/.config/subsurge/config.yaml
-
 🏗️ Architecture
 cmd/          → CLI entrypoint
 internal/     → Core logic
@@ -101,11 +100,7 @@ internal/     → Core logic
 ├── runner/   → Parallel orchestration
 └── sources/  → 16 free + 11 keyed implementations
 pkg/models/   → Shared types
-
-## 🤝 Contributing
-
-PRs welcome! Run `go fmt ./...` before submitting.
-
-## 📜 License
-
+🤝 Contributing
+PRs welcome! Run go fmt ./... before submitting.
+📜 License
 MIT
