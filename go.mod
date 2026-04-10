@@ -1,4 +1,4 @@
-module github.com/user/subsurge
+module github.com/1lo1lo1/subsurge
 
 go 1.22
 
