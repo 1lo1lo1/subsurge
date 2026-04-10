@@ -3,8 +3,8 @@ package filter_test
 import (
 	"testing"
 
-	"github.com/user/subsurge/internal/filter"
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/internal/filter"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 func newResult(domain string) *models.Result {

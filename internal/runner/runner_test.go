@@ -3,7 +3,7 @@ package runner_test
 import (
 	"testing"
 
-	"github.com/user/subsurge/internal/sources"
+	"github.com/1lo1lo1/subsurge/internal/sources"
 )
 
 // TestSourcesRegistry ensures every registered source implements the interface

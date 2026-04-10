@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 type Format string
@@ -74,7 +74,7 @@ func (w *Writer) Banner() {
                                     |___/
 `))
 	fmt.Fprintf(os.Stderr, "  %s - Passive Subdomain Enumeration Engine\n\n",
-		dim("v1.0.0  |  github.com/user/subsurge"))
+		dim("v1.0.0  |  github.com/1lo1lo1/subsurge"))
 }
 
 // Info prints an informational message to stderr (not in silent mode).

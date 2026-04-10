@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 // newBasicAuthRequest creates an HTTP GET request with Basic Auth.

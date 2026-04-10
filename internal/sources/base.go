@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 // NewHTTPClient creates a hardened HTTP client for sources.
@@ -33,7 +33,7 @@ func GET(client *http.Client, url string, headers map[string]string) ([]byte, in
 	if err != nil {
 		return nil, 0, err
 	}
-	req.Header.Set("User-Agent", "Mozilla/5.0 subsurge/1.0 (+https://github.com/user/subsurge)")
+	req.Header.Set("User-Agent", "Mozilla/5.0 subsurge/1.0 (+https://github.com/1lo1lo1/subsurge)")
 	for k, v := range headers {
 		req.Header.Set(k, v)
 	}

@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 // ── GitHub ────────────────────────────────────────────────────────────────────

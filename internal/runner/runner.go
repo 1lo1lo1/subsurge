@@ -6,12 +6,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/user/subsurge/internal/config"
-	"github.com/user/subsurge/internal/filter"
-	"github.com/user/subsurge/internal/output"
-	"github.com/user/subsurge/internal/ratelimit"
-	"github.com/user/subsurge/internal/sources"
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/internal/config"
+	"github.com/1lo1lo1/subsurge/internal/filter"
+	"github.com/1lo1lo1/subsurge/internal/output"
+	"github.com/1lo1lo1/subsurge/internal/ratelimit"
+	"github.com/1lo1lo1/subsurge/internal/sources"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 // Options controls a single enumeration run.

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/user/subsurge/pkg/models"
+	"github.com/1lo1lo1/subsurge/pkg/models"
 )
 
 type ThreatCrowd struct{}

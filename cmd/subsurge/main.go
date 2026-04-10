@@ -10,10 +10,10 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/user/subsurge/internal/config"
-	"github.com/user/subsurge/internal/output"
-	"github.com/user/subsurge/internal/runner"
-	"github.com/user/subsurge/internal/sources"
+	"github.com/1lo1lo1/subsurge/internal/config"
+	"github.com/1lo1lo1/subsurge/internal/output"
+	"github.com/1lo1lo1/subsurge/internal/runner"
+	"github.com/1lo1lo1/subsurge/internal/sources"
 )
 
 var version = "1.0.0"
