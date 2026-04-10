@@ -1,3 +1,5 @@
+# 🔍 subsurge
+
 Fast, passive subdomain enumeration — **no API keys required**.
 
 subsurge queries **16 free data sources** simultaneously, streams results instantly, and pipes directly into your recon workflow. Written in Go — single binary, no dependencies.
@@ -23,6 +25,7 @@ cd subsurge
 go build -o subsurge cmd/subsurge/main.go
 sudo mv subsurge /usr/local/bin/
 
+🚀 Quick Start
 # Basic scan — no setup needed!
 subsurge -d example.com --free
 
@@ -35,6 +38,7 @@ cat domains.txt | subsurge --free --silent | anew found.txt
 # JSON output
 subsurge -d example.com --free -f json -o results.json
 
+🔧 Pipeline Examples
 # Classic recon
 subsurge -d target.com --free --silent | dnsx -silent | httpx -silent | nuclei -t cves/
 
@@ -47,6 +51,7 @@ subsurge -d target.com --free --silent --match "(staging|dev|test|qa)\."
 # Combine with subfinder
 { subfinder -d target.com -silent; subsurge -d target.com --free --silent; } | sort -u | dnsx -silent
 
+📋 All Flags
 | Flag                    | Description                         |
 | ----------------------- | ----------------------------------- |
 | `-d, --domain`          | Target domain                       |
@@ -61,6 +66,7 @@ subsurge -d target.com --free --silent --match "(staging|dev|test|qa)\."
 | `-e, --exclude-sources` | Skip specific sources               |
 | `--timeout`             | HTTP timeout (default: 30s)         |
 
+🌐 Free Sources (No API Key)
 | Source       | Type                     |
 | ------------ | ------------------------ |
 | crt.sh       | Certificate Transparency |
@@ -79,3 +85,27 @@ subsurge -d target.com --free --silent --match "(staging|dev|test|qa)\."
 | dnsdumpster  | DNS recon                |
 | sublist3r    | Sublist3r API            |
 | leakix       | Leaks DB (limited)       |
+
+🔑 Optional: API Keys (More Sources)
+Want 27 total sources? Add API keys for deeper results:
+# Generate config template
+subsurge config
+# Edit: ~/.config/subsurge/config.yaml
+
+🏗️ Architecture
+cmd/          → CLI entrypoint
+internal/     → Core logic
+├── filter/   → Deduplication, wildcards
+├── output/   → Formatters
+├── ratelimit/→ Token bucket
+├── runner/   → Parallel orchestration
+└── sources/  → 16 free + 11 keyed implementations
+pkg/models/   → Shared types
+
+## 🤝 Contributing
+
+PRs welcome! Run `go fmt ./...` before submitting.
+
+## 📜 License
+
+MIT
