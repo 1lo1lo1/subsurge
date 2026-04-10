@@ -1,0 +1,7 @@
+dist/
+*.exe
+*.test
+*.out
+.env
+config.yaml
+vendor/
